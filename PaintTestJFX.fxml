@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FXController">
+   <center>
+      <Pane>
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="284.0" layoutX="128.0" layoutY="14.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="2.0" width="344.0" />
+            <Canvas fx:id="canvas" height="284.0" layoutX="128.0" layoutY="14.0" onMouseDragged="#start" onMouseReleased="#end" width="344.0" BorderPane.alignment="CENTER" />
+         </children>
+      </Pane>
+   </center>
+   <top>
+      <Pane>
+         <children>
+            <Button fx:id="resetButton" layoutX="278.0" mnemonicParsing="false" onAction="#reset" text="Reset" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets top="50.0" />
+               </BorderPane.margin>
+            </Button>
+            <Button fx:id="eraserButton" layoutX="130.0" mnemonicParsing="false" onAction="#erase" text="Eraser" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets top="50.0" />
+               </BorderPane.margin>
+            </Button>
+            <Button fx:id="saveButton" layoutX="420.0" mnemonicParsing="false" onAction="#save" text="Save Image" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets top="50.0" />
+               </BorderPane.margin>
+            </Button>
+            <ColorPicker fx:id="colorPicker" editable="true" layoutX="330.0" onAction="#pickColor" prefHeight="25.0" prefWidth="82.0" promptText="Color" />
+            <ChoiceBox fx:id="thicknessPicker" layoutX="189.0" prefHeight="25.0" prefWidth="76.0" />
+            <Button fx:id="loadButton" layoutX="505.0" mnemonicParsing="false" onAction="#load" text="Load Image" />
+         </children>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+      </Pane>
+   </top>
+   <bottom>
+      <Pane>
+         <children>
+            <Label fx:id="toolLabel" layoutX="278.0" mnemonicParsing="false" text="" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="0.0" />
+               </BorderPane.margin>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="30.0" />
+         </BorderPane.margin>
+      </Pane>
+   </bottom>
+</BorderPane>
